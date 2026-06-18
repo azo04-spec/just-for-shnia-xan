@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(
+180deg,
+#ffd9e8,
+#ffe8f2
+);
+
+overflow:hidden;
+
+}
+
+/* pages */
+
+.page{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+position:absolute;
+
+width:100%;
+
+transition:1s;
+
+}
+
+.hidden{
+
+opacity:0;
+
+pointer-events:none;
+
+}
+
+/* decorations */
+
+.bg{
+
+position:absolute;
+
+inset:0;
+
+overflow:hidden;
+
+}
+
+.item{
+
+position:absolute;
+
+animation:
+float 10s infinite;
+
+opacity:.9;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:
+translateY(-25px);
+
+}
+
+}
+
+.b1{
+left:4%;
+top:5%;
+font-size:120px;
+}
+
+.b2{
+right:5%;
+top:6%;
+font-size:120px;
+}
+
+.b3{
+left:5%;
+bottom:8%;
+font-size:90px;
+}
+
+.b4{
+right:6%;
+bottom:8%;
+font-size:90px;
+}
+
+.h1{
+top:22%;
+left:18%;
+font-size:40px;
+}
+
+.h2{
+top:20%;
+right:18%;
+font-size:40px;
+}
+
+.card{
+
+position:relative;
+
+width:90%;
+
+max-width:850px;
+
+padding:60px;
+
+border-radius:50px;
+
+background:
+
+rgba(255,248,252,.82);
+
+backdrop-filter:
+blur(18px);
+
+box-shadow:
+
+0 12px 40px rgba(255,100,170,.3);
+
+text-align:center;
+
+}
+
+/* title */
+
+.title{
+
+font-size:95px;
+
+font-weight:900;
+
+color:#ff2b84;
+
+text-shadow:
+
+0 8px 18px rgba(255,0,120,.3);
+
+}
+
+.small{
+
+font-size:38px;
+
+margin-top:10px;
+
+}
+
+/* button */
+
+button{
+
+margin-top:50px;
+
+padding:24px 65px;
+
+border:none;
+
+border-radius:999px;
+
+background:
+
+linear-gradient(
+180deg,
+#ff6eb5,
+#ff2d82
+);
+
+color:white;
+
+font-size:30px;
+
+font-weight:700;
+
+cursor:pointer;
+
+box-shadow:
+
+0 10px 25px rgba(255,50,140,.4);
+
+}
+
+button:hover{
+
+transform:scale(1.03);
+
+}
+
+/* message */
+
+.message{
+
+font-size:30px;
+
+line-height:2;
+
+color:#5a0030;
+
+}
+
+.line{
+
+color:#ff5da9;
+
+font-size:28px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="bg">
+
+<div class="item b1">🎈🌸</div>
+<div class="item b2">💗🎈</div>
+<div class="item b3">🌷🎁</div>
+<div class="item b4">🌸💖</div>
+
+<div class="item h1">💗</div>
+<div class="item h2">💗</div>
+
+</div>
+
+<!-- page 1 -->
+
+<div
+class="page"
+id="first">
+
+<div class="card">
+
+<div class="title">
+
+Happy<br>
+BirthDay
+
+</div>
+
+<div class="small">
+
+🎉 ❤️ 🤍
+
+</div>
+
+<button
+onclick="openMessage()">
+
+A message for you 🤍
+
+</button>
+
+</div>
+
+</div>
+
+<!-- page 2 -->
+
+<div
+class="page hidden"
+id="second">
+
+<div class="card">
+
+<div class="message">
+
+<div class="line">
+
+Happy BirthDay to you🎉❤️🤍
+
+</div>
+
+<br>
+
+ڕۆژی لە دایکبوونت پیرۆز بێت🤍
+
+<br>
+
+تەمەنت پرڕ بەرەکەت بێت هەموو ڕۆژێکت هەر شادی وخۆشی بێت
+
+<br>
+
+دووربی لە هەموو ناخۆشی و بەڵایەک
+
+<br>
+
+ئەو تەمەنەی ماوتە لە پێناو خودا بەسەری ببەی
+
+<br>
+
+ئەوەی باشە و خێری تێدایە خودا بێنێتە ڕێگات
+
+<br><br>
+
+دوبارە ڕۆژی لە دایک بوونت پیرۆز بێت🎉❤️🥰
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openMessage(){
+
+document
+.getElementById(
+"first"
+)
+.classList
+.add(
+"hidden"
+);
+
+document
+.getElementById(
+"second"
+)
+.classList
+.remove(
+"hidden"
+);
+
+}
+
+</script>
+
+</body>
+</html>
